@@ -33,7 +33,7 @@
     --side-menu-items:#d1d1d1;
     --side-menu-items-hover:#007bff;
     --side-menu-hover-after-bg:#0056b3;
-    --bs-btn-default:#ed8721;
+    --bs-btn-default:#fff;
     --bs-text-color: #9b9895;
     --bs-btn-hover: #121536;
     --bs-hover-text:#F3BD00;
@@ -205,6 +205,7 @@ header{background: var(--header-bg);}
     font-weight: 500;
     outline: none;
     padding-bottom: 12px;
+    pointer-events: none;
 }
 .navbar .navbar-nav .nav-link:hover{color: var(--primary);}
 .navmenu li a:focus,
@@ -221,7 +222,8 @@ header{background: var(--header-bg);}
 }
 .navmenu li .dropdown-item {padding: 10px 10px;}
 .navmenu li a.dropdown-item{color: var(--color-white); font-weight: 500; border-bottom: 1px solid rgb(255 255 255 / 18%); white-space: normal;}
-.navmenu li a:hover.dropdown-item{color: var(--color-black);}
+.navmenu li a:focus.dropdown-item,
+.navmenu li a:hover.dropdown-item{color: var(--color-black) !important;background: #fff !important}
 .navbar .dropdown-toggle::after {
     border: none;
     content: "\f282";
@@ -939,7 +941,7 @@ ul.dropdown-menu.dropdown-menu3.mygov-lang-menu{
     background: var(--color-gary-100);
 }
 .size-control-list li p{max-width: 65px; height: 65px; margin: 0 auto;padding-left: 0px;padding-right: 0px;font-weight: normal;}
-.size-control-list li a:hover{padding-left: 5px !important;background: var(--bs-btn-default) !important;color: var(--color-white) !important}
+.size-control-list li a:hover{padding-left: 5px !important;background: var(--bs-btn-default) !important;color: var(--color-black) !important}
 .size-control-list i{font-size: 1.25rem}
 .size-control-list li a{position: relative; text-decoration: none;}
 .size-control-list li a:hover:before{color: var(--color-white);}
