@@ -585,8 +585,8 @@ blockquote {
     object-fit: cover;
     object-position: center;
 }
-.read-more{color: #f2ca46;text-decoration: underline;text-decoration-color: #f2ca46; text-underline-offset: 0.375em;}
-.read-more:hover{text-decoration: none;color: var(--color-white);text-decoration-color: var(--color-white); text-underline-offset: none;}
+.read-more{color:#f2ca46;text-decoration: underline;text-decoration-color: #f2ca46; text-underline-offset: 0.375em;}
+.read-more:hover{text-decoration: none;color: #f2ca46;text-decoration-color: var(--color-white); text-underline-offset: none;}
 .border-line{border-top:1px solid rgb(217 181 73 / 40%);}
 .team-content h5,
 .team-content p{color: #f2ca46;}
