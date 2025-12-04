@@ -44,7 +44,7 @@
     --lang-menu-color:#000;
     --menu-hover:#1b2066;
     --menu-dropdown-bg:#ffffff;
-    --bgthemecolor:#48a35c;
+    --bgthemecolor:#232562;
     --heading-color:#0C2B4B;
     --inner-bg:#121536;
     --text-default:#fff;
@@ -580,15 +580,25 @@ blockquote {
     width: 120px;
     height: 120px;
     border-radius: 100%;
-    border:3px solid #fff;
+    border:3px solid #f2ca46;
     aspect-ratio: 14 / 6;
     object-fit: cover;
     object-position: center;
 }
-.read-more{color: var(--color-white);text-decoration: underline;text-decoration-color: var(--color-white); text-underline-offset: 0.375em;}
+.read-more{color: #f2ca46;text-decoration: underline;text-decoration-color: #f2ca46; text-underline-offset: 0.375em;}
 .read-more:hover{text-decoration: none;color: var(--color-white);text-decoration-color: var(--color-white); text-underline-offset: none;}
-.border-line{border-top:1px solid rgb(255 255 255 / 18%);}
-.team-content p{color: #fff;}
+.border-line{border-top:1px solid rgb(217 181 73 / 40%);}
+.team-content h5,
+.team-content p{color: #f2ca46;}
+.team-content h4{
+    background: #ffffff;
+    display: inline-block;
+    font-weight: 900;
+    color: #232562;
+    font-size: 1.25rem;
+    line-height: normal;
+    padding: 3px 20px;
+}
 @media(min-width: 768px){
  .team-content{min-height: 50px}   
 }
