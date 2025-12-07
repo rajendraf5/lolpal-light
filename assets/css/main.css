@@ -152,7 +152,7 @@ header{background: var(--header-bg);padding: 5px 0}
         left: 0;
         right: 0;
         z-index: 999;
-        background: var(--color-white);
+        background: #f8f9fa;
         box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
         padding: 8px 0 !important;
         backdrop-filter: blur(10px);
