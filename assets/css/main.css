@@ -67,6 +67,12 @@
     --box-shadow-2:0 0 10px 0 rgba(0, 0, 0, 0.25);
     --top-bg-green:#48a35c;
     --footer-bottom-bg:#1b245e;
+    --bg-theme-a:#48a35c;
+    --bg-theme-b:#151754;
+    --bg-theme-c:#b89b5e;
+    --bg-theme-d:#eb8820;
+    --bg-theme-e:#ff1949;
+    --bg-theme-f:#77a8be;
 }
 /* Define dark theme */
 [data-bs-theme=dark]{
@@ -138,11 +144,31 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 .top_bg{background: var(--top-bg-green);}
 .text-black{color: var(--color-black);}
 header{background: var(--header-bg);padding: 5px 0}
+
+@media(min-width:992px){
+    .headerfixed.is-sticky {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+        background: var(--color-white);
+        box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
+        padding: 8px 0 !important;
+        backdrop-filter: blur(10px);
+        animation: slideDown 0.35s ease-out;
+    }
+}
+.hoverbg:hover{background: var(--hoverbg);}
+@keyframes slideDown {
+    from {transform: translateY(-100%);}
+    to{transform: translateY(0);}
+}
 /* .btn-link{color: var(--bs-link-color);}
 .btn:hover{background:var(--bs-btn-hover) !important;}
 .btn-link:hover{color: var(--bs-btn-hover) !important;} */
-.top_bg a{color:var(--color-white) !important;}
-.top_bg a:hover{background: transparent !important; color: var(--bs-hover-text) !important;}
+/*.top_bg a{color:var(--color-white) !important;}*/
+/*.top_bg a:hover{background: transparent !important; color: var(--bs-hover-text);}*/
 /* .bg-primary {border:0;}
 .bg-primary{background: var(--bs-text-color) !important;} */
 .dropdown-item.active, .dropdown-item:active{background-color:var(--bs-btn-default) !important;}
@@ -275,6 +301,8 @@ header{background: var(--header-bg);padding: 5px 0}
     .logo img{height: 50px;}
     .navbar-toggler {position: absolute;right: 10px;top: -44px;}
     .navbar-toggler:focus{box-shadow: none}
+    .topbardropdown{right: -56px !important;}
+    .togglesearch{right: -36px;left: auto !important;}
     .sticky-top-sm {position: -webkit-sticky;position: sticky;top: 0;z-index: 2;
         box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1); background: #fff}
 }
@@ -367,7 +395,7 @@ header{background: var(--header-bg);padding: 5px 0}
 } */
 
 
-
+.color-text{color: #fff;height: 100%}
 .grid-top {margin-top: -60px;}
 .grid-card {
     padding: 10px;
@@ -414,6 +442,40 @@ box-shadow: rgb(0 0 0 / 24%) 0px 10px 15px -3px, rgb(0 0 0 / 0%) 0px 4px 6px -2p
 a.grid-card:hover p{color: #19225d;}
 .grid-card p{font-size: 1.125rem; color: var(--bs-card-text); font-weight: 550;}
 .grid-card .gridtext{color: var(--bs-card-color-text); font-weight: 700; line-height: normal;}
+.searchbar{position: relative;cursor: pointer;}
+.togglesearch{
+  background: #ffffff;
+  position: absolute;
+  top: 28px;
+  z-index: 3;
+  padding: 8px;
+  left:0;
+  display: none;
+  width: 290px;
+  border: 1px solid rgba(2, 59, 109, .2);
+  box-shadow: rgb(0 0 0 / 24%) 0px 10px 15px -3px, rgb(0 0 0 / 0%) 0px 4px 6px -2px;
+}
+ 
+.togglesearch input[type="text"]{
+  padding: 5px 40px 5px 10px;
+  outline: none;
+  border: 1px solid #48a35c;
+  border-radius: 0;
+  box-shadow: none;
+}
+ 
+.togglesearch button{
+  padding: 5px 15px;
+  background: #48a35c;
+  color: #fff;
+  margin-left: 0px;
+  border: 0px solid #D80B15;
+  outline: none;
+  position: absolute;
+  right: 9px;
+  top: 9px;
+  cursor: pointer;
+}
 /*** Footer ***/
 footer{background: var(--footer-bg);}
 footer a{text-decoration: none; color: var(--color-white)}
@@ -878,7 +940,7 @@ blockquote {
     position: relative
 } */
 
-.lang-box{position: relative;z-index: 9999;list-style: none;}
+.lang-box{position: relative;list-style: none;}
 .lang-box .dropdown-menu2{    
     min-width: 14rem; padding: 0; border-radius: 0;right:0;background: var(--menu-dropdown-bg);
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
@@ -954,19 +1016,20 @@ ul.dropdown-menu.dropdown-menu3.mygov-lang-menu{
     margin-bottom:0.25rem; margin:3px;background:var(--color-gary-100);border-radius: 0.25rem; }
 .size-control-list li p,
 .size-control-list li h4{margin-bottom: 0;text-transform: capitalize;}
-.size-control-list li p{line-height: 16px !important; font-size: 14px;}
-.size-control-list li a{ padding: 8px 5px !important;
+.size-control-list li p{line-height: 16px !important; font-size: 14px;display: flex;
+    align-items: center;}
+.size-control-list li a{ padding: 5px 5px;
     display: flex;border-radius: 0.25rem;
     flex-direction: column;
     align-items: center;
-    color: var(--lang-menu-color) !important;
+    color: var(--lang-menu-color);
     justify-content: center;
     width: 84px;
-    height: 77px;
+    /*height: 77px;*/
     background: var(--color-gary-100);
 }
-.size-control-list li p{max-width: 65px; height: 65px; margin: 0 auto;padding-left: 0px;padding-right: 0px;font-weight: normal;}
-.size-control-list li a:hover{padding-left: 5px !important;background: var(--ascent-hover) !important;color: var(--color-black) !important}
+.size-control-list li p{max-width: 65px; height: 35px; margin: 0 auto;padding-left: 0px;padding-right: 0px;font-weight: normal;}
+.size-control-list li a:hover{padding-left: 5px !important;background: var(--ascent-hover);color: var(--color-black)}
 .size-control-list i{font-size: 1.25rem}
 .size-control-list li a{position: relative; text-decoration: none;}
 .size-control-list li a:hover:before{color: var(--color-white);}
@@ -975,7 +1038,29 @@ ul.dropdown-menu.dropdown-menu3.mygov-lang-menu{
     min-width: 180px;
     box-shadow: var(--box-shadow-2);
 }
+.bg-theme-a a:hover,
+.bg-theme-a a:focus,
+.bg-theme-a a{background: var(--bg-theme-a) !important;color: var(--color-white);min-height: 40px}
 
+.bg-theme-b a:hover,
+.bg-theme-b a:focus,
+.bg-theme-b a{background: var(--bg-theme-b) !important;color: var(--color-white);min-height: 40px}
+
+.bg-theme-c a:hover,
+.bg-theme-c a:focus,
+.bg-theme-c a{background: var(--bg-theme-c) !important;color: var(--color-white);min-height: 40px}
+
+.bg-theme-d a:hover,
+.bg-theme-d a:focus,
+.bg-theme-d a{background: var(--bg-theme-d) !important;color: var(--color-white);min-height: 40px}
+
+.bg-theme-e a:hover,
+.bg-theme-e a:focus,
+.bg-theme-e a{background: var(--bg-theme-e) !important;color: var(--color-white);min-height: 40px}
+
+.bg-theme-f a:hover,
+.bg-theme-f a:focus,
+.bg-theme-f a{background: var(--bg-theme-f) !important;color: var(--color-white);min-height: 40px}
 /* ----------------------- start Style of Ajex Loader --------------------*/
 #loader{
     margin: 0;

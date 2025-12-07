@@ -28,14 +28,19 @@
                    <li class="ps-2 pe-2 border-end border-light"><a href="#" class="text-uppercase">Skip to main content
                       </a>
                    </li> 
-                   <li class="d-inline-flex align-items-center pe-2 ps-2"><a href="#" class="text-uppercase"><i class="bi bi-search"></i></a></li>
-                   
+                   <li class="searchbar d-inline-flex align-items-center pe-2 ps-2">
+                      <i class="bi bi-search"></i>
+                       <div class="togglesearch">
+                          <input type="text" class="form-control" placeholder="Search"/>
+                          <button type="submit"><i class="bi bi-search"></i></button>
+                      </div>
+                  </li>
                   </ul>
                </div>
                <div class="col-xxl-7 col-xl-7 col-lg-7 text-center text-xl-end col-md-7 col-12 text-lg-end">
                  <div class="d-flex justify-content-lg-end justify-content-center">
                    <div class="d-inline-flex align-items-center border-end border-light pe-2">
-                     <p class="mb-0 d-flex"><i class="bi bi-phone pe-1"></i><span class="d-none d-lg-block">Complaint Section</span> +91 11 24100081</p>
+                     <p class="mb-0 d-flex"><i class="bi bi-phone pe-1"></i><span class="d-none d-lg-block pe-1">Complaint Section</span> +91 11 24100081</p>
                    </div>
                    
                    <div class="d-inline-flex align-items-center lang-hover border-end border-light pe-2">
@@ -146,7 +151,7 @@
                          <li>
                             <a href="#" type="button" class="changer" id="theme_link">
                              <i class="bi bi-link-45deg"></i>
-                             <p>Highlight as</p>
+                             <p>Highlight Links</p>
                            </a>
                          </li>
 
@@ -163,7 +168,12 @@
                              <p class="pt-2 pb-2">Saturation</p>
                            </a>
                          </li>
-
+                          <li>
+                           <a href="#" type="button" class="changer" id="hideimage" data-label="Hide Images" title="Hide Images" >
+                             <i class="bi bi-image"></i>
+                             <p>Hide Image</p>
+                           </a>
+                         </li>
                        </ul>
                        <p class="mt-3 mb-1 font-14 fw-semibold ms-1 pb-0">Text Size</p>
                        <ul class="size-control-list">
@@ -197,24 +207,34 @@
                              <p>Text Spacing</p>
                            </a>
                          </li>
-
-                       </ul>
-                       <p class="mt-3 mb-1 font-14 fw-semibold ms-1 pb-0">Navigation Adjustment</p>
-                       <ul class="size-control-list">
                          <li>
                             <a href="#" type="button" class="changer" id="big-cursor">
                              <i class="bi bi-hand-index-thumb"></i>
                              <p>Big Cursor</p>
                            </a>
                          </li>
-                         <li>
-                           <a href="#" type="button" class="changer" id="hideimage" data-label="Hide Images" title="Hide Images" >
-                             <i class="bi bi-image"></i>
-                             <p>Hide Image</p>
-                           </a>
+                       </ul>
+                       <p class="mt-3 mb-1 font-14 fw-semibold ms-1 pb-0">Theme Color</p>
+                       <ul class="size-control-list">
+                         <li class="bg-theme-a border-0">
+                            <a href="#" type="button" class=""></a>
+                         </li>
+                         <li class="bg-theme-b border-0">
+                            <a href="#" type="button" class=""></a>
+                         </li>
+                         <li class="bg-theme-c border-0">
+                            <a href="#" type="button" class=""></a>
+                         </li>
+                         <li class="bg-theme-d border-0">
+                            <a href="#" type="button" class=""></a>
+                         </li>
+                          <li class="bg-theme-e border-0">
+                            <a href="#" type="button" class=""></a>
+                         </li>
+                          <li class="bg-theme-f border-0">
+                            <a href="#" type="button" class=""></a>
                          </li>
                        </ul>
-
                      </div>
                    </div>
 
@@ -254,7 +274,7 @@
     </div>
   </div>
 
- <nav class="navbar navbar-expand-lg ">
+ <nav class="navbar navbar-expand-lg headerfixed">
   <div class="container">
       <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
         <span class="navbar-toggler-icon"></span>
@@ -898,21 +918,13 @@
     <script>
 
 let count = localStorage.getItem('page_view');
-
 if (count) {
-
   count = Number(count) + 1;
-
   localStorage.setItem('page_view', count);
-
 } else {
-
   count = 1;
-
   localStorage.setItem('page_view', 1);
-
 }
-
 document.getElementById('count').innerText = count;
 </script>
 </body>

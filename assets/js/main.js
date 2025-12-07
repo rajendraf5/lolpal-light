@@ -43,76 +43,30 @@
   }
 }
 
- /**
-   * Initiate Pure Counter
-   */
-  new PureCounter();
-
-  /**
-   * Animation on scroll function and init
-   */
-  // function aosInit() {
-  //   AOS.init({
-  //     duration: 600,
-  //     easing: 'ease-in-out',
-  //     once: true,
-  //     mirror: false
-  //   });
-  // }
-  // window.addEventListener('load', aosInit);
-
-// DOMContentLoaded  end
-
-  // var prevScrollpos = window.pageYOffset;
-  // window.onscroll = function() {
-  // var currentScrollPos = window.pageYOffset;
-  //    if (prevScrollpos > currentScrollPos) {
-  //     document.getElementById("headerfixed").style.top = "0";
-  //     document.getElementById("navsticky").style.top = "75px";
-  //   } 
-  //   else {
-  //     document.getElementById("headerfixed").style.top = "-92px";
-  //     //document.getElementById("navsticky").style.top = "0";
-  //   }
-    
-  //   prevScrollpos = currentScrollPos;
-  // };
-
-// var lastScrollTop = 0;
-// $(window).scroll(function(){
-//   var st = $(this).scrollTop();
-//   var banner = $('#headerfixed');
-//   var navsticky = $('#navsticky');
-//   setTimeout(function(){
-//     if (st > lastScrollTop){
-//       banner.addClass('headerhide');
-//       navsticky.removeClass('tabshide2');
-//     } else {
-//       banner.removeClass('headerhide');
-//       navsticky.addClass('tabshide2');
-//     }
-//     lastScrollTop = st;
-//   }, 100);
-// });
-
-
-   // window.onload = function () {
-   //    lax.setup();
-   //    const e = () => {
-   //      lax.update(window.scrollY), window.requestAnimationFrame(e)
-   //    };
-   //    window.requestAnimationFrame(e)
-   //  };
-$(".navbar-toggler").on('click', function() {
- $("#headerfixed").removeAttr("style");
+jQuery(window).scroll(function () {
+  if (jQuery(window).scrollTop() >= 300) {
+    jQuery('.headerfixed').addClass('is-sticky');
+  } else {
+    jQuery('.headerfixed').removeClass('is-sticky');
+  }
 });
 
-  /**
-   * humbagger menu Animation
-   */
- // document.querySelector('.first-button').addEventListener('click', function() {
- //    document.querySelector('.animated-icon1').classList.toggle('open');
- //  });
+$(document).ready(function() {
+    $(".searchbar > .bi-search").click(function (e) {
+        e.stopPropagation();
+        $(".togglesearch").toggle();
+        $("input[type='text']").focus();
+    });
+
+    $(".togglesearch").click(function (e) {
+        e.stopPropagation();
+    });
+
+    $(document).click(function () {
+        $(".togglesearch").hide();
+    });
+  });
+
 // Mobile Navigation
 
   let scrollTop = document.querySelector('.scroll-top');
