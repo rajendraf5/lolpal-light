@@ -135,41 +135,41 @@
                        <ul class="size-control-list">
 
                          <li>
-                           <a href="#" type="button" class="changer" id="theme_light">
+                           <a href="#" type="button" class="changer" id="contrastNormal">
                              <i class="bi bi-brightness-high"></i>
                              <p>High Contrast</p>
                            </a>
                          </li>
 
                          <li>
-                           <a href="#" type="button" class="changer" id="theme_dark">
+                           <a href="#" type="button" class="changer" id="darkContrast">
                              <i class="bi bi-moon"></i>
                              <p>Dark Contrast</p>
                            </a>
                          </li>
 
                          <li>
-                            <a href="#" type="button" class="changer" id="theme_link">
+                            <a href="#" type="button" class="changer" id="highlightLinks">
                              <i class="bi bi-link-45deg"></i>
                              <p>Highlight Links</p>
                            </a>
                          </li>
 
                          <li>
-                           <a href="#" type="button" class="changer" id="saturation" title="Invert" aria-label="Saturation">
+                           <a href="#" type="button" class="changer" id="invertColors" title="Invert" aria-label="Saturation">
                              <i class="bi bi-droplet-half"></i>
                              <p class="pt-2 pb-2">Invert</p>
                            </a>
                          </li>
 
                          <li>
-                           <a href="#" type="button" class="changer" id="saturation" title="Saturation" aria-label="Saturation">
+                           <a href="#" type="button" class="changer" id="saturationToggle" title="Saturation" aria-label="Saturation">
                              <i class="bi bi-circle-half"></i>
                              <p class="pt-2 pb-2">Saturation</p>
                            </a>
                          </li>
                           <li>
-                           <a href="#" type="button" class="changer" id="hideimage" data-label="Hide Images" title="Hide Images" >
+                           <a href="#" type="button" class="changer" id="hideImages" data-label="Hide Images" title="Hide Images" >
                              <i class="bi bi-image"></i>
                              <p>Hide Image</p>
                            </a>
@@ -178,37 +178,37 @@
                        <p class="mt-3 mb-1 font-14 fw-semibold ms-1 pb-0">Text Size</p>
                        <ul class="size-control-list">
                          <li>
-                            <a href="#" type="button" class="changer" id="text_resize_increase">
+                            <a href="#" type="button" class="changer" id="textInc">
                              <i class="bi bi-chevron-double-up"></i>
                              <p>Increase Text</p>
                            </a>
                          </li>
                          <li>
-                            <a href="#" type="button" class="changer" id="text_resize_decrease">
+                            <a href="#" type="button" class="changer" id="textDec">
                              <i class="bi bi-chevron-double-down"></i>
                              <p>Decrease Text</p>
                            </a>
                          </li>
                          <li>
-                            <a href="#" type="button" class="changer" id="text_resize_reset">
+                            <a href="#" type="button" class="changer" id="textReset">
                              <i class="bi bi-arrow-clockwise"></i>
                              <p>Reset Text</p>
                            </a>
                          </li>
                          <li>
-                            <a href="#" type="button" id="text_height_event">
+                            <a href="#" type="button" id="lineHeightBtn">
                              <i class="bi bi-sort-alpha-down"></i>
                              <p>Line Height</p>
                            </a>
                          </li>
                          <li>
-                            <a href="#" type="button" id="text_space_event">
+                            <a href="#" type="button" id="textSpacingBtn">
                              <i class="bi bi-sort-alpha-down-alt"></i>
                              <p>Text Spacing</p>
                            </a>
                          </li>
                          <li>
-                            <a href="#" type="button" class="changer" id="big-cursor">
+                            <a href="#" type="button" class="changer" id="bigCursorBtn">
                              <i class="bi bi-hand-index-thumb"></i>
                              <p>Big Cursor</p>
                            </a>
@@ -872,8 +872,8 @@
                     <div class="container">
                         <div class="row d-flex align-items-center">
                             <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-12 text-center">
-                                <p class="mb-0">Website Content Managed by Lokpal of India</p>
-                                <p class="mb-0">Designed, Developed and Hosted by National Informatics Centre (NIC)</p>
+                                <p class="mb-0">Website Designed Developed Content Managed by Lokpal of India</p>
+                               <p class="mb-0"> Lokpal, All Right Reserved.</p>
                                 <ul class="copy-rights-Logos pt-2">
                                     <li><a href="https://s3waas.gov.in/" target="_blank"><img src="assets/images/S3WaaS-Logo.png" /></a></li>
                                     <li><a href="http://www.nic.in/" target="_blank"><img src="assets/images/logo-nic2.svg" /></a></li>
@@ -927,5 +927,92 @@ if (count) {
 }
 document.getElementById('count').innerText = count;
 </script>
+<script>
+  let currentSize = 16;
+  let currentLineHeight = 1.5;
+  let currentSpacing = 0;
+
+  document.getElementById("textInc").onclick = () => {
+    currentSize += 1;
+    document.body.style.fontSize = currentSize + "px";
+  };
+
+  document.getElementById("textDec").onclick = () => {
+    if (currentSize > 10) {
+      currentSize -= 1;
+      document.body.style.fontSize = currentSize + "px";
+    }
+  };
+
+  document.getElementById("textReset").onclick = () => {
+    currentSize = 16;
+    currentLineHeight = 1.5;
+    currentSpacing = 0;
+
+    document.body.style.fontSize = "16px";
+    document.body.style.lineHeight = "1.5";
+    document.body.style.letterSpacing = "0px";
+  };
+
+  document.getElementById("lineHeightBtn").onclick = () => {
+    currentLineHeight += 0.1;
+    if (currentLineHeight > 2.5) currentLineHeight = 1.2;
+    document.body.style.lineHeight = currentLineHeight;
+  };
+
+  document.getElementById("textSpacingBtn").onclick = () => {
+    currentSpacing += 0.5;
+    if (currentSpacing > 3) currentSpacing = 0;
+    document.body.style.letterSpacing = currentSpacing + "px";
+  };
+
+  document.getElementById("bigCursorBtn").onclick = () => {
+    document.body.classList.toggle("big-cursor");
+  };
+</script>
+<script>
+  const body = document.body;
+
+  // RESET ALL MODES BEFORE APPLYING NEW ONE
+  function resetModes() {
+    body.classList.remove(
+      "high-contrast",
+      "dark-contrast",
+      "highlight-links",
+      "invert-mode",
+      "saturation-low",
+      "hide-images"
+    );
+  }
+
+  document.getElementById("contrastNormal").onclick = () => resetModes();
+
+  // document.getElementById("highContrast").onclick = () => {
+  //   resetModes();
+  //   body.classList.add("high-contrast");
+  // };
+
+  document.getElementById("darkContrast").onclick = () => {
+    resetModes();
+    body.classList.add("dark-contrast");
+  };
+
+  document.getElementById("highlightLinks").onclick = () => {
+    body.classList.toggle("highlight-links");
+  };
+
+  document.getElementById("invertColors").onclick = () => {
+    body.classList.toggle("invert-mode");
+  };
+
+  document.getElementById("saturationToggle").onclick = () => {
+    body.classList.toggle("saturation-low");
+  };
+
+  document.getElementById("hideImages").onclick = () => {
+    body.classList.toggle("hide-images");
+  };
+</script>
+
 </body>
 </html>
