@@ -12,10 +12,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
+  <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet"> -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
+  <link rel='stylesheet' href="assets/css/holiday-calendar.css" />
 </head>
 
 <body class="d-flex flex-column h-100">
@@ -269,7 +270,7 @@
         <a href="#" class="logo"><img src="assets/images/lokpal_logo.webp" class="img-fluid"  /></a>
       </div>
       <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-3 col-3 pt-1 pt-lg-0 d-flex justify-content-center justify-content-lg-end">
-        <a href="#" class="sb_logo"><img src="assets/images/about-1.webp"  /></a>
+        <a href="#" class="sb_logo"><img src="assets/images/emblem_of_india.webp"  /></a>
       </div>
     </div>
   </div>
@@ -669,9 +670,9 @@
         <section class="pt-5 pb-5">
           <div class="container">
             <div class="row">
-              <div class="col-lg-12">
+              <!-- <div class="col-lg-12">
                 <h2 class="section-heading pb-2">The Journey of Lokpal</h2>
-              </div>
+              </div> -->
               <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 d-flex align-items-stretch">
                 <div class="videomarp shadow w-100">
                   <video width="100%" loop controls muted>
@@ -680,39 +681,181 @@
                 </div>    
               </div>
               <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 pt-lg-0 pt-3 d-flex align-items-stretch">
-                <div class="videomarp shadow w-100">
-                  <div id="inlineDatepicker"></div>
+                <div class="calender-block-type-container">
+    <div class="calender calendar-block calendar-sci-styled">
+        <div class="scalender-container calender calendar-block calendar-sci-styled">
+            <!-- <div class="sc-loader" style="display: none;"><span><i class="fa fa-spinner fa-spin"></i></span></div> -->
+            <div class="scalender-header">
+                <a aria-label="Previous Month" role="button" href="javascript:void(0)" class="scalender-prev bi bi-chevron-left" title="Previous Month"></a>
+                <div class="scalender-month-name">December 2025</div>
+                <a aria-label="Next Month" role="button" href="javascript:void(0)" class="scalender-next bi bi-chevron-right" title="Next Month"></a>
+            </div>
+            <div class="scalender-header-days-name">
+                <table class="no-responsive w-100">
+                    <tbody>
+                        <tr>
+                            <td><span>SUN</span></td>
+                            <td><span>MON</span></td>
+                            <td><span>TUE</span></td>
+                            <td><span>WED</span></td>
+                            <td><span>THU</span></td>
+                            <td><span>FRI</span></td>
+                            <td><span>SAT</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="scalender-days-inner">
+                <div class="scalender-days-list">
+                    <table class="no-responsive w-100">
+                        <tbody>
+                            <tr>
+                                <td aria-hidden="true" class="blank-date"><span></span></td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td class="saturday">6</td>
+                            </tr>
+                            <tr>
+                                <td class="weekend sunday">7</td>
+                                <td>8</td>
+                                <td>9</td>
+                                <td>10</td>
+                                <td>11</td>
+                                <td>12</td>
+                                <td class="saturday">13</td>
+                            </tr>
+                            <tr>
+                                <td class="weekend sunday">14</td>
+                                <td>15</td>
+                                <td>16</td>
+                                <td>17</td>
+                                <td>18</td>
+                                <td>19</td>
+                                <td class="saturday">20</td>
+                            </tr>
+                            <tr>
+                                <td class="weekend sunday">21</td>
+                                <td class="has-holidays vacations"><a href="javascript:void(0);" class="holidaysTag" title="22nd December 2025">22</a>
+                                    <div class="h-tooltip">
+                                        <p>Christmas &amp; New Year Holidays 2025</p>
+                                    </div>
+                                </td>
+                                <td class="current-date has-holidays vacations" aria-current="date"><a href="javascript:void(0);" class="holidaysTag" title="23rd December 2025">23</a>
+                                    <div class="h-tooltip">
+                                        <p>Christmas &amp; New Year Holidays 2025</p>
+                                    </div>
+                                </td>
+                                <td class="has-holidays vacations"><a href="javascript:void(0);" class="holidaysTag" title="24th December 2025">24</a>
+                                    <div class="h-tooltip">
+                                        <p>Christmas &amp; New Year Holidays 2025</p>
+                                    </div>
+                                </td>
+                                <td class="has-holidays vacations"><a href="javascript:void(0);" class="holidaysTag" title="25th December 2025">25</a>
+                                    <div class="h-tooltip">
+                                        <p>Christmas &amp; New Year Holidays 2025</p>
+                                    </div>
+                                </td>
+                                <td class="has-holidays vacations"><a href="javascript:void(0);" class="holidaysTag" title="26th December 2025">26</a>
+                                    <div class="h-tooltip">
+                                        <p>Christmas &amp; New Year Holidays 2025</p>
+                                    </div>
+                                </td>
+                                <td class="saturday has-holidays vacations"><a href="javascript:void(0);" class="holidaysTag" title="27th December 2025">27</a>
+                                    <div class="h-tooltip">
+                                        <p>Christmas &amp; New Year Holidays 2025</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="weekend sunday has-holidays vacations"><a href="javascript:void(0);" class="holidaysTag" title="28th December 2025">28</a>
+                                    <div class="h-tooltip">
+                                        <p>Christmas &amp; New Year Holidays 2025</p>
+                                    </div>
+                                </td>
+                                <td class="has-holidays vacations"><a href="javascript:void(0);" class="holidaysTag" title="29th December 2025">29</a>
+                                    <div class="h-tooltip">
+                                        <p>Christmas &amp; New Year Holidays 2025</p>
+                                    </div>
+                                </td>
+                                <td class="has-holidays vacations"><a href="javascript:void(0);" class="holidaysTag" title="30th December 2025">30</a>
+                                    <div class="h-tooltip">
+                                        <p>Christmas &amp; New Year Holidays 2025</p>
+                                    </div>
+                                </td>
+                                <td class="has-holidays vacations"><a href="javascript:void(0);" class="holidaysTag" title="31st December 2025">31</a>
+                                    <div class="h-tooltip">
+                                        <p>Christmas &amp; New Year Holidays 2025</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
+            </div>
+            <div class="scalender-holidays-by-date">
+                <div class="scalender-holidays-date-heading">holidays</div><a class="sc-back sc-holiday-btn"><i class="fa fa-arrow-circle-left"></i></a><a class="sc-close sc-holiday-btn"><i class="fa fa-times-circle"></i></a>
+                <div class="sc-holidays-list">Loading Holidays..</div>
+            </div>
+            <div class="holiday-type-info">
+                <table style="table-layout: fixed;">
+                    <tbody>
+                        <tr>
+                            <td data-th="Holidays"><span class="bt-content"><span></span>Holidays</span>
+                            </td>
+                            <td data-th="Partial Court Working&nbsp;Days"><span class="bt-content"><span></span>Partial Court Working&nbsp;Days</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+                
               </div>
             </div>
           </div>
-        </section>  
-        <div class="container pt-2 pb-5">
+        </section> 
+
+        <div class="container pt-2 pb-0 ">
           <div class="row g-3">
-            <div class="col-lg-12">
-              <h2 class="section-heading pb-2 text-center pb-0 mb-0">Chairperson / Members Profile</h2>
-            </div>
-            <div class="col-xxl-4 col-xl-4 col-lg-4 mx-auto col-md-12 col-12 d-flex align-items-stretch mb-3">
-                <div class="team-item position-relative w-100">
-                            <div class="position-relative pt-2">
-                                <div class="teamimg"><div class="pimg"><img class="img-fluid" src="assets/images/newhcp1.png" alt="" /></div></div>
-                            </div>
-                            <div class="text-center team-inner team-item-body">
-                                <div class="team-content">
-                                  <h4 class="mb-1 shadow rounded-2">Chairperson, Lokpal</h4>
-                                   
-                                    <p class="mb-0">Shri Justice Ajay Manikrao Khanwilkar</p>
-                                </div>
-                            </div>    
-                                <div class="d-flex justify-centent-center align-items-center">
-                                    <div class="border-line mt-2 pb-1 pt-1 w-100 text-center">
-                                        <a href="#" class="read-more">Know More</a>
-                                    </div>
-                                </div>    
-                            
-                        </div>
+             <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-12 d-flex align-items-stretch mb-3 order-lg-first order-last">
+              <div class="team-item position-relative w-100">
+                  <div class="position-relative pt-2 mb-1">
+                    <div class="teamimg"><div class="pimg"><img class="img-fluid" src="assets/images/newhcp1.png" alt="" /></div></div>
+                  </div>
+                  <div class="text-center team-inner team-item-body">
+                    <div class="team-content">
+                      <h4 class="mb-2 shadow rounded-2">Chairperson, Lokpal</h4>
+                      <p class="mb-0">Shri Justice Ajay Manikrao Khanwilkar</p>
                     </div>
-                  </div>  
+                  </div>    
+                  <div class="d-flex justify-centent-center align-items-center">
+                    <div class="border-line  pb-1 pt-1 w-100 text-center">
+                      <a href="#" class="read-more">Know More</a>
+                    </div>
+                  </div>        
+                </div>
+              </div>
+            <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-12 order-lg-last order-first text-justify">
+              <h2 class="section-heading pb-2">About Lokpal</h2>
+              <p>The Lokpal is the first institution of its kind in independent India,established under the Lokpal and Lokayuktas Act 2013 to inquire and investigate into allegations of corruption against public functionaries who fall within the scope and ambit of the above Act.</p>
+              <p>The Lokpal of India is committed to address concerns and aspirations of the citizens of India for clean governance. It shall make all efforts within its jurisdiction to serve the public interest and shall endeavor to use the powers vested in it to eradicate corruption in public life.</p>
+              <div class="pt-2">  
+                <a class="btn-primary-theme py-2 px-3 rounded-1 text-uppercase" href="#">Read more</a>
+              </div>  
+            </div>
+          </div>
+        </div>    
+        <div class="container pt-1 pb-5">
+          <!-- <div class="row g-3">
+            <div class="col-lg-12">
+              <h2 class="section-heading pb-2 text-center pb-0 mb-0">Members Profile</h2>
+            </div>
+          </div> -->  
                   <div class="row g-3">    
                     <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-12 d-flex align-items-stretch">
                         <div class="team-item position-relative w-100">
@@ -727,7 +870,7 @@
                                 </div>
                             </div>    
                                 <div class="d-flex justify-centent-center align-items-center">
-                                    <div class="border-line mt-2 pb-1 pt-1 w-100 text-center">
+                                    <div class="border-line pb-1 pt-1 w-100 text-center">
                                         <a href="#" class="read-more">Know More</a>
                                     </div>
                                 </div>
@@ -747,7 +890,7 @@
                                 </div>
                             </div>    
                                 <div class="d-flex justify-centent-center align-items-center">
-                                    <div class="border-line mt-2 pb-1 pt-1 w-100 text-center">
+                                    <div class="border-line pb-1 pt-1 w-100 text-center">
                                         <a href="#" class="read-more">Know More</a>
                                     </div>
                                 </div>
@@ -767,7 +910,7 @@
                                 </div>
                             </div>    
                                 <div class="d-flex justify-centent-center align-items-center">
-                                    <div class="border-line mt-2 pb-1 pt-1 w-100 text-center">
+                                    <div class="border-line pb-1 pt-1 w-100 text-center">
                                         <a href="#" class="read-more">Know More</a>
                                     </div>
                                 </div>
@@ -787,7 +930,7 @@
                                 </div>
                             </div>    
                                 <div class="d-flex justify-centent-center align-items-center">
-                                    <div class="border-line mt-2 pb-1 pt-1 w-100 text-center">
+                                    <div class="border-line pb-1 pt-1 w-100 text-center">
                                         <a href="#" class="read-more">Know More</a>
                                     </div>
                                 </div>
@@ -807,7 +950,7 @@
                                 </div>
                             </div>    
                                 <div class="d-flex justify-centent-center align-items-center">
-                                    <div class="border-line mt-2 pb-1 pt-1 w-100 text-center">
+                                    <div class="border-line pb-1 pt-1 w-100 text-center">
                                         <a href="#" class="read-more">Know More</a>
                                     </div>
                                 </div>
@@ -827,7 +970,7 @@
                                 </div>
                             </div>    
                                 <div class="d-flex justify-centent-center align-items-center">
-                                    <div class="border-line mt-2 pb-1 pt-1 w-100 text-center">
+                                    <div class="border-line pb-1 pt-1 w-100 text-center">
                                         <a href="#" class="read-more">Know More</a>
                                     </div>
                                 </div>
@@ -887,7 +1030,7 @@
           <div class="container">
             <div class="row d-flex align-items-center">
               <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-6 col-12">
-                <p class="text-center text-lg-start text-md-start text-white mb-0">Last Updated: <b>Dec 02, 2025</b></p>
+                <p class="text-center text-lg-start text-md-start text-white mb-0">Last Updated: <b>Dec 23, 2025</b></p>
               </div> 
               <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-6 col-12 pt-1 pt-lg-0 d-flex justify-content-center justify-content-lg-end justify-content-md-end">
                 <p class="text-center text-lg-start text-white mb-0">Total Visitors
@@ -903,7 +1046,25 @@
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/js/main.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+  <script type="text/javascript" src="assets/js/holiday-calendar.js"></script>
+  <script>
+    jQuery( document ).ready(function($) {
+        $('.calendar-block').sHolidayCalender({
+            prevMonthText: "Previous Month",
+            nextMonthText: "Next Month",
+            holidaysText: "Holidays",
+            partialHolidayText: "Partial Court Working&nbsp;Days",
+            gazettedHolidayText: "Gazetted Holiday",
+            restrictedHolidayText: "Local Holiday",
+            weeklyHolidayText: "Weekly Off",
+            vacationHolidayText: "Vacation",
+            satOff: "7",
+            satoffStartsFrom: "2024-08-01",
+            updateViews: "block",
+        });
+    });
+</script>
+<!--   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
   <script>
         $(document).ready(function(){
             $('#inlineDatepicker').datepicker({
@@ -913,7 +1074,7 @@
                 autoclose: true // Close when a date is selected (can be false for always open)
             });
         });
-    </script>
+    </script> -->
     <script>
 
 let count = localStorage.getItem('page_view');

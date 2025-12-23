@@ -1,0 +1,206 @@
+.scalender-header {text-align: center;color: #000;font-size: 190%;display: grid;grid-template-columns: 50px calc(100% - 100px) 50px}
+.scalender-header .scalender-prev, .scalender-header .scalender-next {
+  transition: 0.3s ease-in;
+      background: #232562;
+    color: #fff;
+    font-size: 1.125rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.scalender-header .scalender-prev:hover, .scalender-header .scalender-next:hover{
+  background: #28853c;
+}
+.scalender-header div, .scalender-header a {/* padding: 10px; */display: block;/* line-height: 35px; */text-transform: uppercase;font-size: 1.5rem;}
+
+.scalender-container {position: relative;}
+.scalender-container table{border:0;}
+.scalender-container .scalender-header-days-name table{border:0; border-bottom: 1px solid #ddd;border-top: 1px solid #ddd;}
+.scalender-container .scalender-header-days-name table, .scalender-container .scalender-days-list table{table-layout: fixed;margin: 0;}
+
+.scalender-container table td {text-align: center;font-weight: 600;border:0;background:none;}
+.scalender-container .scalender-header-days-name table td{ border-right: 1px solid #ddd;}
+.scalender-container .scalender-header-days-name table td:last-child {border:0;}
+
+.scalender-container table td.has-holidays a {padding: 8px 0;display: block;color: #ffffff;}
+.scalender-container .scalender-days-list table td{padding: 8px 0;border: 1px solid #ddd;position: relative;}
+.scalender-container .scalender-days-list table td:hover {background: #ecf2f7;}
+.scalender-container .scalender-days-list table td.has-holidays { padding: 0;}
+
+.scalender-container.calenderBig  .scalender-days-list table td{
+  line-height: 55px;
+}
+
+
+.scalender-container .scalender-days-list table tr:first-child td,.scalender-container .scalender-days-list table tr:last-child td{border-top: 0;}
+.scalender-container .scalender-days-list table tr td:first-child{border-left: 0;}
+.scalender-container .scalender-days-list table td {border-bottom: 0;border-right: 0;}
+.scalender-container .scalender-days-list table tr:nth-last-child(2) td {border-bottom: 1px solid #ddd;}
+.scalender-container .scalender-days-list table tr:last-child td:last-child:not(.last-seven){border-right: 1px solid #ddd;}
+
+.scalender-header-days-name {color: #000;}
+
+.h-tooltip {
+  display: none;position: absolute;font-size: 13px;text-transform: initial;background: #333;
+  color: #fff;padding: 10px 10px;left: -50px;right: -50px; z-index: 2;bottom: 100%;text-align: left;max-width: 300px;
+}
+
+.h-tooltip:after {
+  content: "";border: 7px solid transparent;border-bottom: 0;border-top: 7px solid #333;
+  position: absolute;bottom: -7px;left: 50%;margin-left: -3.5px;
+}
+
+.h-tooltip p {margin: 0;}
+
+.scalender-days-inner table td:hover .h-tooltip,
+.scalender-days-inner  table td a:focus + .h-tooltip {display: block;}
+
+.scalender-container table td a > span.cl-holiday-past {background: #555555;}
+
+.scalender-container table td a > span.cl-holiday {background: #01bb64;}
+
+.scalender-container table td a > span.cl-holiday-up {background: #0078d7;}
+
+.scalender-holidays-by-date {
+  display: none;visibility: hidden;color: #ccc;position: absolute;
+  top: 0px;bottom: 0;left: 0;right: 0;background: rgb(0, 0, 0, 0.87);
+}
+
+.scalender-holidays-date-heading {
+  height: 8%;text-align: center;padding: 5px 5px;border-bottom: 1px solid #d2dae2;
+  font-size: 15px;font-weight: bold;text-transform: uppercase;
+}
+
+.blank-date {visibility: hidden;background-color: #d2dae2;}
+
+.holiday-type-info table{border-top: 1px solid  #ddd;margin: 0;table-layout:fixed;}
+.holiday-type-info table td {
+  border: 0;
+  padding: 10px 5px;
+  border-left: 1px solid #ddd;
+  white-space: nowrap;
+  font-weight: 400;
+  background: #f3f3f3;
+}
+.holiday-type-info table td:first-child{
+  border-left: 0;
+}
+.holiday-type-info table td > span > span{display: inline-block;width: 15px;height: 15px;margin-right: 5px;background: #dab312;vertical-align: middle;    margin-top: -4px;}
+.holiday-type-info table td:nth-child(1) {width: 32%;}
+.holiday-type-info table td:nth-child(2) {width: 26%;}
+.holiday-type-info table td:nth-child(1) > span > span{background: #ff3b30;}
+.holiday-type-info table td:nth-child(3) > span > span{background: #1545d3;}
+.scalender-container table td.current-date {background: #e3f0fd;color: #0c71b9;}
+
+
+
+
+.sc-holiday-btn {
+  position: absolute;top: 2px;font-size: 19px;
+  cursor: pointer;transition: 0.3s;
+}
+
+.sc-close {right: 5px;}
+
+.sc-back {left: 5px;}
+
+.sc-close:hover, .sc-back:hover {color: #fff !important;}
+
+.sc-holidays-list ul li {
+  text-align: left;padding: 3px 5px;font-size: 13px;
+  color: #dfdfdf;border: none;border-bottom: 1px solid #504b4b;transition: 0.3s ease-in-out;
+}
+
+.sc-holidays-list ul li:hover {background: rgb(255, 255, 255, 0.08);}
+.sc-holidays-list ul li:last-child {border: none;}
+.sc-holidays-list ul li p {margin: 0;}
+.sc-holidays-list {overflow: hidden;height: 92%;padding: 5px;}
+.sc-holidays-list .sc-title a:hover {color: #dfdfdf;}
+
+.sc-icon span {margin-right: 5px;}
+.sc-location span {font-size: 17px;}
+
+
+.scalender-container .scalender-days-list table td.saturday .h-tooltip {right: 0;left: -63%;}
+.scalender-container .scalender-days-list table td.saturday .h-tooltip:after {right: 28%;left: auto;}
+.scalender-container .scalender-days-list table td.sunday .h-tooltip {left: 0;right: -100%;}
+.scalender-container .scalender-days-list table td.sunday .h-tooltip:after {left: 30%;}
+.scalender-container .scalender-days-list table td.gazetted a ,
+.scalender-container .scalender-days-list table td.restricted a,
+.scalender-container .scalender-days-list table td.vacations a,.scalender-container .scalender-days-list table td.weekend {color: #ff3b30 !important;}
+.scalender-container .scalender-days-list table td.partial a{color: #dab312 !important;}
+
+.scalender-days-inner {position: relative;}
+
+.sc-loader {
+  display: none;position: absolute;background: rgba(0, 0, 0, 0.5);color: #fff;
+  left: 0; top: 0;bottom: 0;right: 0;z-index: 999;font-size: 3em;
+}
+
+.sc-loader span {
+  top: 50%;display: inline-block;position: absolute;
+  left: 50%;margin-top: -28px;margin-left: -21px;
+}
+.scalender-container.calendar-sci-styled {border: 1px solid #ddd;}
+
+.scalender-container.calendar-sci-styled {border: 1px solid #ddd;}
+
+.contrast .scalender-header.accent-border-color {
+  background: #000 !important;
+  border: 1px solid #ccc !important;
+}
+
+.contrast .scalender-header-days-name ul li:last-child {
+  border-right: 1px solid #ccc;
+}
+
+.contrast .scalender-header-days-name ul li:first-child {
+  border-left: 1px solid #ccc;
+}
+
+.contrast .scalender-container ul {
+  background: #333;
+}
+
+.contrast .scalender-container table td,.contrast  .scalender-header .scalender-prev, .contrast  .scalender-header .scalender-next {
+  background: #222 !important;
+}
+
+
+@media screen and (max-width: 1199px) {
+  .holiday-type-info table td{font-size: 13px}
+  .holiday-type-info table td:nth-child(1) {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .scalender-header-days-name td {padding: 8px 0;}
+  .holiday-type-info table td:nth-child(1),.holiday-type-info table td:nth-child(2) {width: auto;}
+  .holiday-type-info table td{padding: 5px 6px;font-size:15px;}
+  table tbody tr:nth-child(even) td{background:none !important}
+  .scalender-header div, .scalender-header a {padding: 5px;font-size: 80%;}
+  .scalender-container table.bt tbody td::before{font-weight: 500;}
+}
+
+
+@media screen and (max-width: 540px) {
+  .calender-tabular-type-container thead th {
+    font-weight: 500;
+    padding: 8px 8px;
+    font-size: 14px;
+  }
+  .calender-tabular-type-container tbody td {
+    padding: 6px 4px;
+  }
+}
+
+
+
+
+@media print {
+  .scalender-container.calenderBig  .scalender-days-list table td{
+    line-height:normal;
+  }
+  .scalender-header a { visibility: hidden; }
+}

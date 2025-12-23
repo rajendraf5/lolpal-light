@@ -24,7 +24,7 @@
     --bs-border-radius: 0.375rem;
     --bs-border-radius-sm: 0.25rem;
     --breadcrumb-text-color:#999;
-    --copy-right-bg:#151754;
+    --copy-right-bg:#383838;
     --border-gray-600:#666;
     --table-hover:#f2f2f2;
     --table-odd:#f9f9f9;
@@ -61,12 +61,12 @@
     --bs-card-border:#d3d3d3;
     --bs-card-text:#121536;
     --bs-card-color-text:#19225d;
-    --footer-bg:#1b245e;
+    --footer-bg:#121619;
     --bs-tab-bg:#fff;
     --ascent-hover:#f5f5f5;
     --box-shadow-2:0 0 10px 0 rgba(0, 0, 0, 0.25);
     --top-bg-green:#48a35c;
-    --footer-bottom-bg:#1b245e;
+    --footer-bottom-bg:#121619;
     --bg-theme-a:#48a35c;
     --bg-theme-b:#151754;
     --bg-theme-c:#b89b5e;
@@ -144,8 +144,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 .top_bg{background: var(--top-bg-green);}
 .text-black{color: var(--color-black);}
 header{background: var(--header-bg);padding: 5px 0}
-
 .hoverbg:hover{background: var(--hoverbg);}
+.font-18{font-size: 1.125rem;}
 @keyframes slideDown {
     from {transform: translateY(-100%);}
     to{transform: translateY(0);}
@@ -193,7 +193,7 @@ header{background: var(--header-bg);padding: 5px 0}
 .toplist li{display: inline-flex; border-right:1px solid var(--surface-color);color: var(--color-white);}
 .toplist-right li a, .toplist li a{color: var(--color-white); text-decoration: none;display: flex;}
 .toplist li a:hover{background: var(--surface-color);}
-.sb_logo img{width: 40px; padding-top: 0.5rem}
+.sb_logo img{width: 65px; padding-top: 0.5rem}
 .datepicker-inline {width: 100%;}
 .datepicker table{width: 100% !important}
 #spinner {
@@ -271,7 +271,7 @@ header{background: var(--header-bg);padding: 5px 0}
     .navbar .navbar-nav .nav-link{padding-left: 1px; padding-right: 1px;font-size: 15px;}
 }
 @media (min-width: 992px) {
-    .logo img{height: 75px}
+    .logo img{height: 100px}
     .dropdown-menu{min-width: 15rem; padding: 0;border-radius: 0;}
     .dropdown .topbardropdown,
     .mygov-lang-menu,
@@ -382,6 +382,7 @@ body.gray-bg-light{background: var(--color-black);}
     display: flex;
     flex-direction: column;
     min-width: 0;
+    transition: var(--transition-5);
     word-wrap: break-word;
 }
 .team-item-body {flex: 1 1 auto;}
@@ -397,11 +398,12 @@ body.gray-bg-light{background: var(--color-black);}
     z-index: -1;
 }
 
-/* .team-item:hover::after {
-    height: 100%;
+.team-item:hover{
     transition: var(--transition-5);
-    background: var(--primary);
-} */
+    /*transform: translateY(-2px);
+    background-color: var(--secondary);*/
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.20);
+}
 
 /* .team-item .team-social {
     position: absolute;
@@ -530,10 +532,10 @@ footer a:hover{color: var(--color-white);}
 }
 
 .footer .btn.btn-link:hover {color: var(--primary);letter-spacing: 1px;box-shadow: none;}
-.copyright {background: var(--copy-right-bg); border-top: 1px solid rgb(255 255 255 / 16%);}
+.copyright {background: var(--copy-right-bg); border-top: 1px solid rgb(255 255 255 / 10%);}
 .copyright a {color: var(--copy-text);text-decoration: none;}
 .copyright a:hover {color: var(--light);}
-.footer-bottom{background: var(--footer-bottom-bg);border-top: 1px solid rgb(255 255 255 / 16%);}
+.footer-bottom{background: var(--footer-bottom-bg);border-top: 1px solid rgb(255 255 255 / 10%);}
 /* Basic reset */
 /*.container {
     display: flex;
@@ -678,9 +680,10 @@ blockquote {
 }
 .read-more{color:#f2ca46;text-decoration: underline;text-decoration-color: #f2ca46; text-underline-offset: 0.375em;}
 .read-more:hover{text-decoration: none;color: #f2ca46;text-decoration-color: var(--color-white); text-underline-offset: none;}
-.border-line{border-top:1px solid rgb(217 181 73 / 40%);}
+.border-line{border-top:1px solid #f2ca46;}
 .team-content h5,
 .team-content p{color: #f2ca46;}
+.team-content p{font-size: 1.125rem; font-weight: 500; padding-left: 1rem; padding-right: 1rem}
 .team-content h4{
     background: #ffffff;
     display: inline-block;
@@ -1267,7 +1270,7 @@ ul.dropdown-menu.dropdown-menu3.mygov-lang-menu{
   animation-play-state: paused;
 }
 
-.btn-primary-theme{background:#fff; color: #000; border: 1px solid #1b245e; text-decoration: none;}
+.btn-primary-theme{background: var(--secondary); color: #fff; border: 0; text-decoration: none;}
 .btn-primary-theme:hover{background:var(--dark); color: #fff;}
 /* Continuous infinite scrolling */
 @keyframes scroll-up {
