@@ -90,9 +90,8 @@ $(document).ready(function() {
 
     // All your theme buttons
 const buttons = [
-  "lightBtn",
-  "darkBtn",
   "greenBtn",
+  "blueDarkBtn",
   "yellowBtn",
   "blueBtn",
   "orangeBtn"
@@ -100,12 +99,12 @@ const buttons = [
 
 // Add click events
 buttons.forEach(id => {
-  document.getElementById(id).onclick = () => {
+  document.gebluedarktElementById(id).onclick = () => {
 
     // CHANGE THE THEME
-    if (id === "lightBtn")  document.documentElement.setAttribute("data-bs-theme", "light");
-    if (id === "darkBtn")   document.documentElement.setAttribute("data-bs-theme", "dark");
     if (id === "greenBtn")  document.documentElement.setAttribute("data-bs-theme", "green");
+    if (id === "blueDarkBtn")   document.documentElement.setAttribute("data-bs-theme", "blue");
+    // if (id === "greenBtn")  document.documentElement.setAttribute("data-bs-theme", "green");
     if (id === "yellowBtn") document.documentElement.setAttribute("data-bs-theme", "yellow");
     if (id === "blueBtn")   document.documentElement.setAttribute("data-bs-theme", "blue");
     if (id === "orangeBtn") document.documentElement.setAttribute("data-bs-theme", "orange");

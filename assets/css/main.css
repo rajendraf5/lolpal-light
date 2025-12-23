@@ -112,6 +112,12 @@
     --footer-bg:#181818;
     --bs-tab-bg:#1a1a1a;
 }
+[data-bs-theme=green]{
+    --top-bg-green: #009688;
+}
+[data-bs-theme=blue]{
+    --top-bg-green: #fff;
+}
 /*body.theme_dark{background: var(--dark);    color: var(--default-color);}
 body.theme_dark a {color: var(--body-text) !important;}
 body.theme_dark .navbar .navbar-nav .nav-link{color: var(--body-text);}
@@ -1011,6 +1017,7 @@ ul.dropdown-menu.dropdown-menu3.mygov-lang-menu{
     width: 31px;
 }
 .font-14{font-size: 14px}
+.font-12{font-size:12px;}
 .social-area li a{ display: block;
     text-align: center;
     padding: 8px 10px;
